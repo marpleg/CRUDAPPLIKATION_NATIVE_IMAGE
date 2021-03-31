@@ -1,0 +1,13 @@
+curl  --request GET http://localhost:3001/person/getall
+
+
+curl --header "Content-Type: application/json"   --request POST   --data '{"vorname":"Test","nachname":"Test","nummern":["111546541","1122222"]}'   http://localhost:3001/person/add
+
+
+curl --header "Content-Type: application/json"   --request POST   --data '{"id":29, "vorname":"Testchange","nachname":"Test","nummern":["123change","1122222"]}'   http://localhost:3001/person/change
+
+
+curl --header "Content-Type: application/json"   --request DELETE   --data '{"id":29}'   http://localhost:3001/person/delete
+
+
+curl --header "Content-Type: application/json"   --request GET   --data '{"id":29}'   http://localhost:3001/person/get
